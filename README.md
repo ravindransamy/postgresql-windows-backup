@@ -12,16 +12,23 @@ PowerShell-based automation for backing up PostgreSQL databases on Windows Serve
 - Removes matching backup files older than seven days
 - Designed to run through Windows Task Scheduler
 
-## Example output
+## Example Output
+
+The backup script automatically creates a separate folder for each application database and stores timestamped backup files.
 
 ```text
 F:\PostgresBackups\
-├── globals_20261010_120000.sql
-├── SternaService\
-│   ├── SternaService_20261010_120000.dump
-│   └── SternaService_20261010_180000.dump
-└── vaultdemo\
-    └── vaultdemo_20261010_120000.dump
+├── globals_<timestamp>.sql
+├── AppDB\
+│   ├── AppDB_<timestamp>.dump
+│   └── AppDB_<timestamp>.dump
+├── AppDB_Test\
+│   └── AppDB_Test_<timestamp>.dump
+└── AnotherDB\
+    └── AnotherDB_<timestamp>.dump
+```
+
+**Note:** `AppDB`, `AppDB_Test`, and `AnotherDB` are illustrative names. Actual folder and file names are generated automatically from the databases discovered on the PostgreSQL server. Timestamps indicate when each backup was created.
 ```
 
 The names and timestamps above are examples.
