@@ -1,0 +1,36 @@
+# PostgreSQL backups and exports
+*.dump
+*.backup
+*.sql
+*.sql.gz
+*.tar
+
+# Logs
+*.log
+Logs/
+Logs*/
+logs/
+logs*/
+
+# PostgreSQL password and credential files
+pgpass.conf
+.pgpass
+*.key
+*.pem
+*.pfx
+*.p12
+.env
+.env.*
+
+# Local machine/editor files
+.vscode/
+.idea/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
