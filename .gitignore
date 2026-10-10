@@ -34,3 +34,7 @@ Desktop.ini
 *.tmp
 *.temp
 *.bak
+
+# Local backup directories
+PostgresBackups/
+PostgreSQLBackups/
